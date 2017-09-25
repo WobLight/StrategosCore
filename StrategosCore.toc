@@ -1,0 +1,12 @@
+## Interface: 11200
+## Title: Strategos
+## Notes: Enhances your BG expirience.
+## SavedVariables: 
+## Version: 0.1
+## Author: WobLight
+Object.lua
+Timer.lua
+Strategos.lua
+Broadcaster.lua
+XML\Ring.xml
+XML\Indicator.xml

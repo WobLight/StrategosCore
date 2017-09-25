@@ -1,0 +1,32 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+    <Script file="Ring.lua"/>
+    <Frame name="StrategosRingFrameTemplate" virtual="true" hidden="true">
+        <Layers>
+            <Layer level="BACKGROUND">
+                <Texture name="$parentRing" parentKey="ring" file="Interface\Addons\StrategosCore\Textures\BaseStatusIndicator.tga" setallpoints="true"/>
+            </Layer>
+            <Layer level="OVERLAY">
+                <Texture name="$parentIndicator" file="Interface\Addons\StrategosCore\Textures\BaseStatusIndicator2.tga">
+                    <Anchors>
+                        <Anchor point="CENTER" relativeTo="$parentRing" relativePoint="TOP"/>
+                    </Anchors>
+                    <Size>
+                        <AbsDimension x="20" y="20"/>
+                    </Size>
+                </Texture>
+            </Layer>
+        </Layers>
+        <Size>
+            <AbsDimension x="20" y="20"/>
+        </Size>
+        <Scripts>
+            <OnUpdate>
+                this:OnUpdate()
+            </OnUpdate>
+            <OnLoad>
+                StrategosCore.Ring:new(this)
+            </OnLoad>
+        </Scripts>
+    </Frame>
+</Ui>
