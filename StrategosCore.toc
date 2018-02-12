@@ -8,5 +8,7 @@ Object.lua
 Timer.lua
 Strategos.lua
 Broadcaster.lua
+Utils.lua
 XML\Ring.xml
 XML\Indicator.xml
+
