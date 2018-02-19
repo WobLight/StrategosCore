@@ -16,3 +16,15 @@ function strarg(s,...)
     end
     return s
 end
+
+function buildDefaults(t, d)
+    for k,v in d do
+        if type(v) == "table" then
+            if not t[k] then
+                t[k] = {}
+            end
+            buildDefaults(t[k], v)
+        end
+    end
+    setmetatable(t, {__index = d})
+end
